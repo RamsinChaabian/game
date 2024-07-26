@@ -4,6 +4,27 @@ Array.prototype.last = function () {
   return this[this.length - 1];
 };
 
+// Initialize the Telegram Web App
+Telegram.WebApp.initDataUnsafe();
+
+// Define the custom button
+const playButton = {
+  text: 'Play',
+  color: '#ffffff', // Set the button text color
+  backgroundColor: '#1da1f2' // Set the button background color
+};
+
+// Show the custom button
+Telegram.WebApp.showButtons([playButton]);
+
+// Add an event listener to the button
+Telegram.WebApp.MainButton.onClick(function() {
+  // Handle the button click event
+  console.log('Play button clicked!');
+  // Add your desired functionality here
+});
+
+  
 // A sinus function that acceps degrees instead of radians
 Math.sinus = function (degree) {
   return Math.sin((degree / 180) * Math.PI);
