@@ -15,7 +15,10 @@ const playButton = {
 };
 
 // Show the custom button
-Telegram.WebApp.showButtons([playButton]);
+Telegram.WebApp.MainButton.text = playButton.text;
+Telegram.WebApp.MainButton.color = playButton.color;
+Telegram.WebApp.MainButton.backgroundColor = playButton.backgroundColor;
+Telegram.WebApp.MainButton.show();
 
 // Add an event listener to the button
 Telegram.WebApp.MainButton.onClick(function() {
