@@ -4,8 +4,8 @@ Array.prototype.last = function () {
   return this[this.length - 1];
 };
 
-// Initialize the Telegram Web App
-Telegram.WebApp.initDataUnsafe();
+// Wait for the Telegram Web App to be ready
+Telegram.WebApp.ready();
 
 // Define the custom button
 const playButton = {
@@ -23,7 +23,6 @@ Telegram.WebApp.MainButton.onClick(function() {
   console.log('Play button clicked!');
   // Add your desired functionality here
 });
-
   
 // A sinus function that acceps degrees instead of radians
 Math.sinus = function (degree) {
